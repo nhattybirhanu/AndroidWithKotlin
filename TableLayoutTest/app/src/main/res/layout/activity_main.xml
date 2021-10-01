@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <EditText
+        android:hint="please enter android version code"
+        android:layout_margin="8dp"
+        android:id="@+id/version_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <EditText
+        android:hint="please enter android version name"
+
+        android:layout_margin="8dp"
+        android:id="@+id/version_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <Button
+        android:textAllCaps="false"
+        android:text="Add"
+        android:onClick="addNewTableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:gravity="center"
+                    android:padding="5dp"
+                    >
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Version">
+
+                    </TextView>
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/black" android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="Version name">
+
+                    </TextView>
+                </TableRow>
+                <TableRow
+                    android:gravity="center"
+                    android:padding="5dp"
+                    >
+
+                    <TextView
+                        android:gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Android 9.0">
+
+                    </TextView>
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="Pie">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center"
+                    android:padding="5dp"
+                    >
+
+                    <TextView
+                        android:gravity="center"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Android 8.0">
+
+                    </TextView>
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="Oreo">
+
+                    </TextView>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
