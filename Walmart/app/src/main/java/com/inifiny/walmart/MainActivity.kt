@@ -1,15 +1,14 @@
 package com.inifiny.walmart
 
-import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
-
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -83,7 +82,24 @@ var users= arrayListOf<User>(
             intent.putExtra(Intent.EXTRA_EMAIL, user.email);
             intent.putExtra(Intent.EXTRA_SUBJECT, "Password recovery");
             intent.putExtra(Intent.EXTRA_TEXT, "Your password for Walmart login is ${user.password}");
-            startActivity(intent)
+
+            intent.setType("message/rfc822")
+
+            try {
+                startActivity(
+                    Intent.createChooser(
+                        intent,
+                        "Send email using..."
+                    )
+                )
+            } catch (ex: ActivityNotFoundException) {
+                Toast.makeText(
+                    this,
+                    "No email clients installed.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
 
         }?:let { email_layout.error="User is not found" }
     }
