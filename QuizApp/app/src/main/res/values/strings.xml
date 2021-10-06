@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QuizeApp</string>
+    <string name="question1">1) In the kotlin,the default visibility modifier is?</string>
+    <string name="question">2) What is true about kotlin?</string>
+</resources>
