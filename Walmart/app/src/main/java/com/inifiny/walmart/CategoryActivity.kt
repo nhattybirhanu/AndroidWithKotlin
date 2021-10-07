@@ -37,7 +37,13 @@ class CategoryActivity:AppCompatActivity()  {
            holder.itemView.image.setImageResource(images[position])
            holder.itemView.card.setOnClickListener {
                Toast.makeText(holder.itemView.context,"You have chosen the Clothing category of  ${titles[position]}",Toast.LENGTH_SHORT).show()
+                if(titles[position].equals("Electronics"))
+                {
+                    var dialog=CategoryDetail();
+                    dialog.show(supportFragmentManager,null);
+                }
            }
+
        }
 
        override fun getItemCount(): Int {
