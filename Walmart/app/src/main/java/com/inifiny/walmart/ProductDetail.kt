@@ -1,7 +1,9 @@
 package com.inifiny.walmart
 
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import kotlinx.android.synthetic.main.product_detail.*
 import kotlinx.android.synthetic.main.product_detail.image
 
@@ -9,6 +11,7 @@ class ProductDetail:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.product_detail);
+
         if (intent!=null){
             var product:Product= intent.getSerializableExtra("product") as Product;
             product?.let {

@@ -33,11 +33,12 @@ var users= arrayListOf<User>(
                 user?.let { users.add(it) }
                 Log.i("user", user?.toString().toString());
 
-                // Handle the Intent
             }
         }
     }
     fun signIn(view:View) {
+        email_layout.setErrorEnabled(false);
+        password_layout.setErrorEnabled(false);
         if (TextUtils.isEmpty(email.text)) {
             email_layout.error = "please enter your email"
             return;
@@ -50,7 +51,7 @@ var users= arrayListOf<User>(
         }
         var user = user(email.text.toString());
         if (user == null) {
-            email_layout.error = "User is not found"
+            Toast.makeText(this,"user is not found",Toast.LENGTH_SHORT).show();
             return
         }
         if (user.password.equals(password.text.toString()))
