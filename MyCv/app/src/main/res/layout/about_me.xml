@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:orientation="vertical"
@@ -47,6 +48,7 @@
 
                 </TextView>
                 <ImageButton
+                    android:id="@+id/e_education"
                     android:layout_margin="4dp"
                     android:padding="4dp"
                     android:backgroundTint="@android:color/transparent"
@@ -98,6 +100,7 @@
 
                 </TextView>
                 <ImageButton
+                    android:id="@+id/e_person"
                     android:layout_margin="4dp"
                     android:padding="4dp"
                     android:backgroundTint="@android:color/transparent"
@@ -149,6 +152,7 @@
 
                 </TextView>
                 <ImageButton
+                    android:id="@+id/e_strength"
                     android:layout_margin="4dp"
                     android:padding="4dp"
                     android:backgroundTint="@android:color/transparent"
@@ -200,6 +204,7 @@
 
                 </TextView>
                 <ImageButton
+                    android:id="@+id/e_weaknes"
                     android:layout_margin="4dp"
                     android:padding="4dp"
                     android:backgroundTint="@android:color/transparent"
